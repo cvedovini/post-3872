@@ -32,7 +32,7 @@ Text Domain: post3872
  * Then we use the Settings API to create a section and register an option.
  *
  * You will notice the only difference with coding a normal page is the parent
- * slug of our option page (must be 'settings.php' and the capability required
+ * slug of our option page (must be 'settings.php') and the capability required
  * for this page to be displayed (here 'manage_network_options').
  */
 add_filter('network_admin_menu', 'post3872_network_admin_menu');
