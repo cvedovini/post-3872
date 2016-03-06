@@ -106,11 +106,10 @@ function post3872_update_network_options() {
   // individually.
   foreach ($options as $option) {
     if (isset($_POST[$option])) {
+      // Save our option with the site's options.
       // If we registered a callback function to sanitizes the option's
-      // value it is where we call it (see register_setting).
-      $option_value = apply_filters('sanitize_option_' . $option_name, $_POST[$option]);
-      // And finally we save our option with the site's options.
-      update_site_option($option, $option_value);
+      // value it will be called here (see register_setting).
+      update_site_option($option, $_POST[$option]);
     } else {
       // If the option is not here then delete it. It depends on how you
       // want to manage your defaults however.
