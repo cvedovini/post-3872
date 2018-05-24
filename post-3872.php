@@ -35,7 +35,7 @@ Text Domain: post3872
  * slug of our option page (must be 'settings.php') and the capability required
  * for this page to be displayed (here 'manage_network_options').
  */
-add_filter('network_admin_menu', 'post3872_network_admin_menu');
+add_action('network_admin_menu', 'post3872_network_admin_menu');
 function post3872_network_admin_menu() {
     // Create our options page.
     add_submenu_page('settings.php', __('My Network Options', 'post3872'),
